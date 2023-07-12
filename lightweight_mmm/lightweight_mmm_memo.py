@@ -352,6 +352,7 @@ class LightweightMMM:
     train_media_size = media.shape[0]
     kernel = numpyro.infer.NUTS(
         model=self._model_function,
+        # -> _MODEL_FUNCTION = models.media_mix_model
         target_accept_prob=target_accept_prob,
         init_strategy=init_strategy)
 
